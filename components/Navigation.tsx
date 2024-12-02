@@ -43,7 +43,7 @@ export default function Navigation() {
           }}
           className={`text-lg font-semibold transition-colors duration-300 ${
             activeSection === item.toLowerCase()
-              ? 'text-gold border-b-2 border-gold'
+              ? 'text-white border-b-2 border-personalflair'
               : 'text-gray-300 hover:text-gold'
           }`}
         >
