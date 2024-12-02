@@ -26,13 +26,13 @@ export default function Header() {
 
   return (
     <header
-      className={`top-0 left-0 right-0 z-50 bg-black bg-opacity-90 text-white p-2 transition-all duration-300 ${
+      className={`top-0 left-0 right-0 z-50 bg-black bg-opacity-90 text-white p-2 transition-all duration-300 py-4  ${
         isSticky ? 'fixed shadow-md' : 'relative'
       }`}
     >
-      <div className="container mx-auto flex justify-between items-center">
+      <div className="mx-2  flex justify-between items-center">
         <div className="flex items-center">
-          <Image src="/logo.png" alt=".." width={40} height={40} />
+          <Image className="bg-white rounded-3xl" src="/logo.png" alt=".." width={40} height={40} />
           <h1 className="ml-2 text-2xl font-bold">Viktor's Liquor</h1>
         </div>
         <Navigation />
