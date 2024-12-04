@@ -21,20 +21,22 @@ export default function LandingPage() {
       </motion.div>
     </div>
     <div
-      className="right-side flex-1 sm:min-h-[50vh] md:min-h-screen bg-white relative"
+      className="right-side flex-1 sm:min-h-[50vh] md:min-h-screen bg-white relative relative"
     >
-      <motion.div 
-      initial={{ opacity: 0, x: -50 }}
-      animate={{ opacity: 1, x: 0 }}
-      transition={{ duration: 0.5 }}
-      className="h-[320px] md:w-1/2  text-black p-4 sm:p-6 md:p-8 flex flex-col justify-center">
-        <h3 className="text-xl sm:text-2xl md:text-3xl font-bold mb-2 sm:mb-4">Featured Product</h3>
-        <p className="text-base sm:text-lg md:text-xl mb-2 sm:mb-4">Elderflower Fizz</p>
-        <p className="text-sm sm:text-base mb-4">Our best-selling cocktail is a refreshing blend of premium vodka, tart cranberry juice, and sweet, fragrant elderflower liqueur.</p>
-        <button className="bg-gold text-black px-4 py-2 rounded-full text-xs sm:text-sm font-semibold hover:bg-opacity-80 transition-colors duration-300 w-full sm:w-auto">
-          Try Now
-        </button>
-      </motion.div>
+      <div className="absolute md:bottom-14 left-11">
+        <motion.div
+        initial={{ opacity: 0, x: -50 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.5 }}
+        className="h-[320px] md:w-1/2  text-black p-4 sm:p-6 md:p-8 flex flex-col justify-center border">
+          <h3 className="text-xl sm:text-2xl md:text-3xl font-bold mb-2 sm:mb-4">Featured Product</h3>
+          <p className="text-base sm:text-lg md:text-xl mb-2 sm:mb-4">Elderflower Fizz</p>
+          <p className="text-sm sm:text-base mb-4">Our best-selling cocktail is a refreshing blend of premium vodka, tart cranberry juice, and sweet, fragrant elderflower liqueur.</p>
+          <button className="bg-gold text-black px-4 py-2 rounded-full text-xs sm:text-sm font-semibold hover:bg-opacity-80 transition-colors duration-300 w-full sm:w-auto">
+            Try Now
+          </button>
+        </motion.div>
+      </div>
     </div>
   </section>
 )
