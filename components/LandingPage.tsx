@@ -23,7 +23,7 @@ export default function LandingPage() {
     <div
       className="right-side flex-1 sm:min-h-[50vh] md:min-h-screen bg-white relative relative"
     >
-      <div className="absolute md:bottom-14 left-11">
+      <div className="md:absolute md:bottom-14 left-11">
         <motion.div
         initial={{ opacity: 0, x: -50 }}
         animate={{ opacity: 1, x: 0 }}
