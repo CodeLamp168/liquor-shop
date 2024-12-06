@@ -73,6 +73,15 @@ body {
   }
 }
 
+.customShadow {
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.55);
+}
+
+.customGold{
+  box-shadow: 0 0 10px rgba(200, 172, 101, 1)
+  
+}
+
 @layer base {
   * {
     @apply border-border;

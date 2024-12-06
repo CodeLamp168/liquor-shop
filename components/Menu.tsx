@@ -12,15 +12,15 @@ export default function Menu() {
   return (
     <section id="menu" className="py-20 text-white bg-maincolor bg-gray-900">
       <div className="container mx-auto px-4 ">
-        <h2 className="text-4xl font-bold mb-12 text-center">Our Selection</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <h2 className="text-4xl font-bold mb-12 text-center ">Our Selection</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
           {drinks.map((drink, index) => (
             <motion.div
               key={drink.name}
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="bg-black p-6 rounded-lg shadow-lg hover:shadow-gold transition-shadow duration-300"
+              className="bg-black p-6 rounded-lg  hover:!scale-105 shadow shadow-white hover:shadow-centerShadow hover:shadow-gold transition-transform  transition-shadow duration-300"
             >
               <Image src={drink.image} alt={drink.name} width={200} height={200} className="mx-auto mb-4" />
               <h3 className="text-xl font-semibold text-center">{drink.name}</h3>
