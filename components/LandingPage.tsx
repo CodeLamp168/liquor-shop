@@ -1,4 +1,6 @@
 import { motion } from 'framer-motion'
+import Image from 'next/image'
+
 
 export default function LandingPage() {
   return (
@@ -37,6 +39,20 @@ export default function LandingPage() {
           </button>
         </motion.div>
       </div>
+      <motion.div
+        initial={{ opacity: 0, y: 50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, delay: 0.2 }}
+        className="mt-8 md:mt-0 md:absolute md:bottom-0 md:right-8 w-full md:w-auto px-4 md:px-0"
+      >
+        <Image
+          src="/drink-landing-page.png"
+          alt="Featured Drink"
+          width={600}
+          height={800}
+          className="w-full sm:w-[300px] md:w-[400px] lg:w-[800px]  h-auto object-contain"
+        />
+      </motion.div>
     </div>
   </section>
 )
