@@ -20,14 +20,16 @@ export default function Menu() {
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="bg-black p-6 rounded-lg  hover:!scale-105 shadow shadow-white hover:shadow-centerShadow hover:shadow-gold transition-transform  transition-shadow duration-300"
+              className="bg-black p-4 rounded-lg  hover:!scale-105 shadow shadow-white hover:shadow-centerShadow hover:shadow-gold transition-transform  transition-shadow duration-300"
             >
-              <Image src={drink.image} alt={drink.name} width={200} height={200} className="mx-auto mb-4" />
-              <h3 className="text-xl font-semibold text-center">{drink.name}</h3>
-              <p className="text-center mt-2 text-gray-400">Discover our exquisite {drink.name.toLowerCase()} collection</p>
-              <button className="mt-4 w-full bg-gold text-black py-2 rounded-full font-semibold hover:bg-opacity-80 transition-colors duration-300">
-                View Details
-              </button>
+              <Image src={drink.image} alt={drink.name} width={320} height={250} className="mx-auto mb-4 bg-white rounded" />
+              <div className="flex flex-col text-center">
+                <h3 className="text-2xl font-semibold text-center">{drink.name}</h3>
+                <p className="text-center mt-2 text-gray-400 h-[100px]">Discover our exquisite {drink.name.toLowerCase()} collection</p>
+                <button className="mt-4 w-full bg-gold text-black py-2 rounded-full font-semibold hover:bg-opacity-80 transition-colors duration-300">
+                  View Details
+                </button>
+              </div>
             </motion.div>
           ))}
         </div>

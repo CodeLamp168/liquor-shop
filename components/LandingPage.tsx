@@ -25,12 +25,12 @@ export default function LandingPage() {
     <div
       className="right-side flex-1 sm:min-h-[50vh] md:min-h-screen bg-white relative relative"
     >
-      <div className="md:absolute md:bottom-14 left-11">
+      <div className="lg:absolute lg:bottom-14 left-11">
         <motion.div
         initial={{ opacity: 0, x: -50 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.5 }}
-        className="h-[320px] md:w-1/2  text-black p-4 sm:p-6 md:p-8 flex flex-col justify-center border">
+        className="h-[320px] md:w-full lg:w-6/12 text-black p-4 sm:p-6 md:p-8 flex flex-col justify-center ">
           <h3 className="text-xl sm:text-2xl md:text-3xl font-bold mb-2 sm:mb-4">Featured Product</h3>
           <p className="text-base sm:text-lg md:text-xl mb-2 sm:mb-4">Elderflower Fizz</p>
           <p className="text-sm sm:text-base mb-4">Our best-selling cocktail is a refreshing blend of premium vodka, tart cranberry juice, and sweet, fragrant elderflower liqueur.</p>
@@ -43,14 +43,16 @@ export default function LandingPage() {
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 0.2 }}
-        className="mt-8 md:mt-0 md:absolute md:bottom-0 md:right-8 w-full md:w-auto px-4 md:px-0"
+        className="mt-8 md:mt-0 lg:absolute lg:bottom-0 lg:right-8 w-full md:w-auto px-4 md:px-0"
       >
+
+        {/* todo: fix the img positioning with the text div so that they work together and not suck */}
         <Image
           src="/drink-landing-page.png"
           alt="Featured Drink"
           width={600}
           height={800}
-          className="w-full sm:w-[300px] md:w-[400px] lg:w-[800px]  h-auto object-contain"
+          className="w-full sm:w-[300px] md:w-[400px] xl:w-[600px]  h-auto object-contain"
         />
       </motion.div>
     </div>
