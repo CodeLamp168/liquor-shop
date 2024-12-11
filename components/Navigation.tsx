@@ -2,9 +2,11 @@
 
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
+import { Menu } from 'lucide-react'
 
 export default function Navigation() {
   const [activeSection, setActiveSection] = useState('')
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
 
   useEffect(() => {
     const handleScroll = () => {
@@ -29,27 +31,38 @@ export default function Navigation() {
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' })
     }
+    setIsMenuOpen(false)
   }
 
   return (
-    <nav className="flex justify-center space-x-6">
-      {['Home', 'Menu', 'About', 'Contact'].map((item) => (
-        <Link
-          key={item}
-          href={`#${item.toLowerCase()}`}
-          onClick={(e) => {
-            e.preventDefault()
-            scrollToSection(item.toLowerCase())
-          }}
-          className={`text-lg font-semibold transition-colors duration-300 ${
-            activeSection === item.toLowerCase()
-              ? 'text-white border-b-2 border-gold'
-              : 'text-gray-300 hover:text-gold'
-          }`}
-        >
-          {item}
-        </Link>
-      ))}
+    <nav className="relative">
+      <button
+        className="lg:hidden text-white"
+        onClick={() => setIsMenuOpen(!isMenuOpen)}
+        aria-label="Toggle menu"
+      >
+        <Menu size={32} />
+      </button>
+      <div className={`lg:flex ${isMenuOpen ? 'flex' : 'hidden'} flex-col lg:flex-row absolute lg:relative top-full right-0 lg:top-auto lg:right-auto bg-maincolor lg:bg-transparent p-4 lg:p-0 rounded-lg shadow-lg lg:shadow-none`}>
+        {['Home', 'Menu', 'About', 'Contact'].map((item) => (
+          <Link
+            key={item}
+            href={`#${item.toLowerCase()}`}
+            onClick={(e) => {
+              e.preventDefault()
+              scrollToSection(item.toLowerCase())
+            }}
+            className={`text-lg font-semibold transition-colors duration-300 px-4 py-2 lg:py-0 ${
+              activeSection === item.toLowerCase()
+                ? 'text-white border-b-2 border-gold'
+                : 'text-gray-300 hover:text-gold'
+            }`}
+          >
+            {item}
+          </Link>
+        ))}
+      </div>
     </nav>
   )
 }
+
