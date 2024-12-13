@@ -30,7 +30,7 @@ export default function Header() {
         isSticky ? 'fixed shadow-md' : 'relative'
       }`}
     >
-      <div className="container mx-2 px-4 flex justify-between items-center">
+      <div className=" mx-2 px-4 flex justify-between items-center">
         <div className="flex items-center">
           <Image className="bg-white rounded-3xl" src="/logo.png" alt="404" width={40} height={40} />
           <h1 className="ml-2 text-xl lg:text-2xl font-bold">Viktor's Liquor</h1>

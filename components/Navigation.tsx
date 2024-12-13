@@ -10,7 +10,7 @@ export default function Navigation() {
 
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ['home', 'menu', 'about', 'contact']
+      const sections = ['home', 'menu', 'about']
       const currentSection = sections.find(section => {
         const element = document.getElementById(section)
         if (element) {
@@ -44,7 +44,7 @@ export default function Navigation() {
         <Menu size={32} />
       </button>
       <div className={`lg:flex ${isMenuOpen ? 'flex' : 'hidden'} flex-col lg:flex-row absolute lg:relative top-full right-0 lg:top-auto lg:right-auto bg-maincolor lg:bg-transparent p-4 lg:p-0 rounded-lg shadow-lg lg:shadow-none`}>
-        {['Home', 'Menu', 'About', 'Contact'].map((item) => (
+        {['Home', 'Menu', 'About'].map((item) => (
           <Link
             key={item}
             href={`#${item.toLowerCase()}`}
