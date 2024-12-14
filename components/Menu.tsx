@@ -27,7 +27,7 @@ export default function Menu() {
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="bg-gradient-to-br from-gray-800 to-black p-6 rounded-lg hover:shadow-lg hover:shadow-gold transition-all duration-300 transform hover:-translate-y-2"
+              className="bg-gradient-to-br from-gray-800 to-black p-6 rounded-lg shadow-sm shadow-white hover:shadow-lg hover:shadow-gold transition-all duration-300 transform hover:-translate-y-2"
             >
               <div className="relative h-48 mb-4">
                 <Image src={drink.image} alt={drink.name} layout="fill" objectFit="cover" className="rounded-lg" />

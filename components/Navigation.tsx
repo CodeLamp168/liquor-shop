@@ -35,15 +35,15 @@ export default function Navigation() {
   }
 
   return (
-    <nav className="relative">
+    <nav className="relative flex items-center justify-center">
       <button
-        className="lg:hidden text-white"
+        className="md:hidden text-white"
         onClick={() => setIsMenuOpen(!isMenuOpen)}
         aria-label="Toggle menu"
       >
         <Menu size={32} />
       </button>
-      <div className={`lg:flex ${isMenuOpen ? 'flex' : 'hidden'} flex-col lg:flex-row absolute lg:relative top-full right-0 lg:top-auto lg:right-auto bg-maincolor lg:bg-transparent p-4 lg:p-0 rounded-lg shadow-lg lg:shadow-none`}>
+      <div className={`md:flex ${isMenuOpen ? 'flex' : 'hidden'} flex-col md:flex-row absolute md:relative top-full -right-8 md:top-auto md:right-auto bg-black md:bg-transparent p-4 md:p-0 rounded-lg shadow-lg md:shadow-none`}>
         {['Home', 'Menu', 'About'].map((item) => (
           <Link
             key={item}
