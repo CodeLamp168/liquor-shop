@@ -1,11 +1,13 @@
 import { motion } from 'framer-motion'
 import Image from 'next/image'
 
+//TODO: These items are not the matches imgs, templates for now 
+// Are you that much of a lightweight that you cant even get the right drink for each one?
 const drinks = [
-  { name: 'Premium Vodka', image: '/vodka.png' },
-  { name: 'Aged Whiskey', image: '/whiskey.png' },
-  { name: 'Craft Gin', image: '/gin.png' },
-  { name: 'Exotic Rum', image: '/rum.png' },
+  { name: 'Premium Vodka', image: '/menuitem-1.jpg' },
+  { name: 'Aged Whiskey', image: '/menuitem-2.jpg' },
+  { name: 'Craft Gin', image: '/menuitem-3.jpg' },
+  { name: 'Exotic Rum', image: '/menuitem-4.jpg' },
 ]
 
 export default function Menu() {
