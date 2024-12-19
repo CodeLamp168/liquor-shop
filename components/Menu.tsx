@@ -1,13 +1,12 @@
 import { motion } from 'framer-motion'
 import Image from 'next/image'
 
-//TODO: These items are not the matches imgs, templates for now 
-// Are you that much of a lightweight that you cant even get the right drink for each one?
+
 const drinks = [
-  { name: 'Premium Vodka', image: '/menuitem-1.jpg' },
-  { name: 'Aged Whiskey', image: '/menuitem-2.jpg' },
-  { name: 'Craft Gin', image: '/menuitem-3.jpg' },
-  { name: 'Exotic Rum', image: '/menuitem-4.jpg' },
+  { name: 'Premium Vodka', image: '/vodka.jpg' },
+  { name: 'Aged Whiskey', image: '/whiskey.jpg' },
+  { name: 'Craft Gin', image: '/gin.jpg' },
+  { name: 'Exotic Rum', image: '/rum.jpg' },
 ]
 
 export default function Menu() {
@@ -32,7 +31,7 @@ export default function Menu() {
               className="bg-gradient-to-br from-gray-800 to-black p-6 rounded-lg shadow-sm shadow-white hover:shadow-lg hover:shadow-gold transition-all duration-300 transform hover:-translate-y-2"
             >
               <div className="relative h-48 mb-4">
-                <Image src={drink.image} alt={drink.name} layout="fill" objectFit="cover" className="rounded-lg" />
+                <Image src={drink.image} alt={drink.name} layout="fill" sizes='auto' objectFit="cover" className="rounded-lg" />
               </div>
               <div className="flex flex-col text-center">
                 <h3 className="text-2xl font-semibold mb-2 text-gradient-gold">{drink.name}</h3>
